@@ -1,0 +1,110 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../static/base.css">
+<link rel="stylesheet" href="../static/style.css">
+<link rel="stylesheet" href="../static/override.css">
+<link rel="stylesheet" href="../static/custom.css">
+<title>Blog — lieder</title>
+<body>
+  <header>
+    <h1>Deutsche Lieder</h1>
+    <nav>
+      <ul class="nav navbar-nav">
+        <li><a href="../">Home</a></li>
+        
+          <li class="active"><a href="./">Blog</a></li>
+        
+          <li><a href="../projects/">CDs</a></li>
+        
+          <li><a href="../about/">About</a></li>
+        
+      </ul>
+    </nav>
+  </header>
+  <div class="page">
+    
+  <h2 style="margin-left: .5rem">Blog</h2>
+  <div class="blog-list">
+  
+    
+  <div class="blog-post">
+   
+  <div class="excerpt">
+    <h2><a href="erwartung-op2-1/">シェーンベルク：期待 - Erwartung op.2-1</a></h2>
+    <p>「４つの歌曲」より</p>
+
+    <div class="meta">Modified on 2025-02-02</div>
+  </div>
+  
+  </div>
+
+  
+    
+  <div class="blog-post">
+   
+  <div class="excerpt">
+    <h2><a href="wo-die-schoenen-trompeten-blasen/">マーラー：トランペットが美しく鳴り響くところ - Wo die schönen Trompeten blasen</a></h2>
+    <p>『子供の不思議な角笛』（Des Knaben Wunderhorn）より。</p>
+
+    <div class="meta">Modified on 2025-02-02</div>
+  </div>
+  
+  </div>
+
+  
+    
+  <div class="blog-post">
+   
+  <div class="excerpt">
+    <h2><a href="aus-heliopolis-ii-d754/">ヘリオポリスより II - Aus Heliopolis II D754</a></h2>
+    <p>nkmk</p>
+
+    <div class="meta">Modified on 2025-02-02</div>
+  </div>
+  
+  </div>
+
+  
+    
+  <div class="blog-post">
+   
+  <div class="excerpt">
+    <h2><a href="aus-heliopolis-i-d753/">ヘリオポリスより I - Aus Heliopolis I D753</a></h2>
+    <p>nkmk</p>
+
+    <div class="meta">Modified on 2025-02-02</div>
+  </div>
+  
+  </div>
+
+  
+  </div>
+
+  
+  <div class="pagination">
+    
+      <span class="disabled">&laquo; Previous</span>
+    
+    | 1 |
+    
+      <span class="disabled">Next &raquo;</span>
+    
+  </div>
+
+
+  </div>
+  <footer>
+    &copy; Copyright 2025 by Aki.
+  </footer>
+  <script>
+    const preElement = document.getElementById('lyrics');
+    const lines = preElement ? preElement.textContent.split('\n') : [];
+    preElement.innerHTML = lines
+      .map((line, index) =>
+        `<p class="${index % 2 === 0 ? 'odd-line' : 'even-line'}">${line.trimStart()}</p>`
+      )
+      .join('\n');
+  </script>
+</body>

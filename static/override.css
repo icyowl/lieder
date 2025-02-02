@@ -1,0 +1,130 @@
+:root {
+  /* https://colorpalettes.net/color-palette-111/ */
+  --dull-mint: #aac7c5;
+  --milk: #F8F9FB;
+  --turquoise: #558381;
+
+  --primary: var(--dull-mint);
+  --secondary: var(--gray30);
+  --accent: var(--turquoise);
+  --surface: var(--milk);
+}
+
+/* override */
+
+body {
+  font-family: var(--font-body);
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+header, div.page, footer {
+  width: initial;
+  max-width: 720px;
+  margin: 0 auto;
+  background: var(--surface);
+  padding: 1rem 2rem;
+}
+
+header h1 {
+  color: var(--secondary);
+  margin: 0;
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-semi-bold);
+  font-size: var(--fontsize-1);
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  display: inline;
+  margin: 0 8px 0 0;
+  padding: 0;
+}
+
+/* new */
+
+body {
+  background: var(--surface);
+}
+
+div.page {
+  padding-top: .75rem;
+  background: hsl(220 27.3% 97.8%); /* milk */
+  box-shadow: 0px 2px 4px 0px hsl(220 27.3% 94.8%);
+}
+
+h2, h3, h4, .meta, footer {
+  color: var(--gray30);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: .5rem auto;
+  background: var(--primary);
+}
+
+header nav ul li a {
+  color: var(--secondary);
+  font-family: var(--font-european);
+  font-size: var(--fontsize-4);
+  font-weight: var(--font-weight-semi-bold);
+  text-decoration: none;
+}
+
+footer {
+  font-family: var(--font-european);
+  font-size: var(--fontsize-5);
+  background: var(--surface);
+}
+
+.meta {
+  margin-bottom: .75rem;
+  font-family: var(--font-european);
+  font-size: var(--fontsize-6);
+}
+
+.pagination {
+  font-family: var(--font-european);
+  margin-top: 2rem;
+}
+
+.active a {
+  color: var(--accent);
+}
+
+.disabled {
+  color: var(--gray60);
+}
+
+@media screen and (max-width: 640px) {
+  body {
+    margin: 4px;
+  }
+
+  header {
+    display: block;
+    margin: initial;
+  }
+
+  header, footer, div.page {
+    padding: 1rem;
+  }
+
+  img {
+    width: 100%;
+  }
+}

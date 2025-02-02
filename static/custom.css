@@ -1,0 +1,150 @@
+/* pagination */
+
+.paging {
+  display: flex;
+  justify-content: space-between;
+}
+
+.paging, .pagination {
+  font-family: var(--font-european);
+  margin-top: 2rem;
+}
+
+.paging a, .pagination a {
+  text-decoration: none;
+}
+
+/* layout */
+
+pre p {
+  white-space: pre-wrap;
+}
+
+.excerpt a {
+  text-decoration: none;
+}
+
+.excerpt p {
+  margin: .25rem 0;
+  font-size: var(--fontsize-6);
+}
+
+.excerpt h2 {
+  font-size: var(--fontsize-3);
+}
+
+.excerpt {
+  /* border: solid 1px var(--gray90); */
+  border-radius: 8px;
+  padding: .5rem 1rem;
+  margin-bottom: 2rem;
+  line-height: var(--line-height-tight);
+  background: hsl(220 27.3% 99.8%);
+}
+
+
+.blog-feature .blog-post:first-child .excerpt {
+  border: none;
+  padding: 0rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  background: var(--surface);
+}
+
+.blog-feature .blog-post:first-child .excerpt p {
+  font-size: var(--fontsize-5);
+  line-height: var(--line-height);
+}
+
+.blog-feature .blog-post:first-child .excerpt .meta {
+  margin-top: .5rem;
+}
+
+.blog-list {
+  margin-top: 1rem;
+}
+
+/* content */
+
+.youtube-video {
+  width: 60%;
+  margin: 2rem auto;
+  aspect-ratio: 16/9;
+}
+
+.youtube-video iframe {
+  width: 100%;
+  height: 100%;
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 640px) {
+  .youtube-video {
+    width: 100%;
+  }
+}
+
+
+pre {
+  /* override */
+  border: none;
+  padding: 0;
+  font-size: initial;
+  line-height: initial;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background: inherit;
+}
+
+#lyrics  {
+  text-align: center;
+  /* background: #f8f8f8; */
+}
+
+#lyrics p {
+  margin: 0;
+  line-height: 1;
+}
+
+#lyrics .odd-line {
+  font-family: var(--font-european);
+  font-size: var(--fontsize-4);
+  color: var(--gray30);
+}
+
+#lyrics .even-line {
+  font-family: var(--font-heading);
+  font-size: var(--fontsize-6);
+  color: var(--gray60);
+}
+
+#lyrics p:first-child {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-semi-bold);
+  font-size: var(--fontsize-2);
+}
+
+#lyrics p:nth-child(2) {
+  font-family: var(--font-heading);
+  font-size: var(--fontsize-5);
+  color: var(--gray30);
+}
+
+#lyrics .odd-line:empty::before {
+  /* empty element is <span><span> */
+  content: "*";
+  display: none;
+}
+
+.source {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+
+/* @media screen and (max-width: 640px) {
+  footer {
+    border-top: 2px solid var(--gray30);
+  }
+  
+} */
