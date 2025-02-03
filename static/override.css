@@ -10,6 +10,7 @@
   --secondary: var(--gray30);
   --accent: var(--turquoise);
   --surface: var(--lightgray);
+  --surface: gray;
   --base: var(--base_);
   --base: #fff;
 }
@@ -68,13 +69,6 @@ div.page {
   background: var(--surface);
   /* padding: 0; */
 }
-
-
-
-/* .blog-post div.page {
-  padding: 0;
-  background: red;
-} */
 
 h2, h3, h4, .meta, footer {
   color: var(--gray30);
@@ -147,7 +141,6 @@ pre p {
   margin-bottom: 2rem;
   line-height: var(--line-height-tight);
   background: var(--base);
-  /* background: #fff; */
 }
 
 @media screen and (max-width: 640px) {
