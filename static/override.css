@@ -3,16 +3,16 @@
   --dull-mint: #aac7c5;
   --milk: #F8F9FB;
   --turquoise: #558381;
-  --lightgray: hsl(70 4.3 calc(72.9 + 2)); /* #bcbdb7 */
-  --base_: hsl(168 9.4 calc(89.6 + 14)); /* #e2e7e6; */
+  --lightgray: hsl(70 4.3 93.9); /* #bcbdb7 */
+  --lightgray: #f5f5f4;
+  --base_: hsl(168 9.4 calc(89.6 + 9)); /* #e2e7e6; */
 
   --primary: var(--dull-mint);
   --secondary: var(--gray30);
   --accent: var(--turquoise);
   --surface: var(--lightgray);
-  --surface: gray;
   --base: var(--base_);
-  --base: #fff;
+  /* --base: #fff; */
 }
 
 /* override */
@@ -135,12 +135,13 @@ pre p {
 }
 
 .excerpt {
-  /* border: solid 1px var(--gray90); */
   border-radius: 8px;
   padding: .5rem 1rem;
   margin-bottom: 2rem;
   line-height: var(--line-height-tight);
   background: var(--base);
+  background: #fff;
+  box-shadow: 0px 4px 8px 0px rgb(245 245 244 / 0.5);
 }
 
 @media screen and (max-width: 640px) {
