@@ -70,7 +70,7 @@ div.page {
 }
 
 .wrapper-page {
-  padding: 1rem 2rem;
+  padding: .5rem 2rem;
 }
 
 h2, h3, h4, .meta, footer {
@@ -140,7 +140,7 @@ pre p {
 .excerpt {
   border-radius: 8px;
   padding: .5rem 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   line-height: var(--line-height-tight);
   background: var(--base);
   /* background: #fff; */
@@ -148,7 +148,7 @@ pre p {
 }
 
 .wrapper-page.wrapper-blog {
-  padding: 1rem;
+  padding: .5rem 1rem;
 }
 
 .wrapper-blog h2 {
@@ -181,6 +181,18 @@ pre p {
 
   header, footer, .wrapper-page {
     padding: 1rem;
+  }
+
+  .wrapper-page.wrapper-blog {
+    padding: 0 .5rem;
+  }
+
+  .wrapper-blog h2 {
+    margin-left: .5rem;
+  }
+  
+  .blog-list h2 {
+    margin-left: 0;
   }
 
   img {
