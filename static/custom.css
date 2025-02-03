@@ -16,31 +16,7 @@
 
 /* layout */
 
-pre p {
-  white-space: pre-wrap;
-}
 
-.excerpt a {
-  text-decoration: none;
-}
-
-.excerpt p {
-  margin: .25rem 0;
-  font-size: var(--fontsize-6);
-}
-
-.excerpt h2 {
-  font-size: var(--fontsize-3);
-}
-
-.excerpt {
-  /* border: solid 1px var(--gray90); */
-  border-radius: 8px;
-  padding: .5rem 1rem;
-  margin-bottom: 2rem;
-  line-height: var(--line-height-tight);
-  background: hsl(220 27.3% 99.8%);
-}
 
 
 .blog-feature .blog-post:first-child .excerpt {
