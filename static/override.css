@@ -3,7 +3,7 @@
   --dull-mint: #aac7c5;
   --milk: #F8F9FB;
   --turquoise: #558381;
-  --lightgray: hsl(70 4.3 calc(72.9 + 20)); /* #bcbdb7 */
+  --lightgray: hsl(70 4.3 calc(72.9 + 2)); /* #bcbdb7 */
   --base_: hsl(168 9.4 calc(89.6 + 14)); /* #e2e7e6; */
 
   --primary: var(--dull-mint);
