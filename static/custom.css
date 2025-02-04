@@ -149,6 +149,13 @@ input[type="checkbox"]:checked ~ #lyrics p.even-line {
   padding-bottom: 1rem;
 }
 
+.posts {
+  text-align: center;
+  color: var(--gray60);
+  margin-top: 0;
+  margin-right: 2rem;
+}
+
 
 /* @media screen and (max-width: 640px) {
   footer {
