@@ -31,13 +31,15 @@
   
     <h2>シェーンベルク：期待 - Erwartung op.2-1</h2>
     <p class="meta">Modified on 2025-02-02</p>
-    <p>「４つの歌曲」（4 Lieder）より。</p>
+    <p>「４つの歌曲」（4 Lieder）より。nkmk</p>
 
     <div class="youtube-video">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/hNHOFbi2W4U?si=rRM9HtLhPKErggRm&rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
-
-    <div class="foo">
+    <div class="song-title">
+      Erwartung op.2-1
+    </div>
+    <div class="lyrics">
       <label for="toggle"></label>
       <input id="toggle" type=checkbox >
       <div id="lyrics"><p>Aus dem meergrünen Teiche
@@ -48,8 +50,8 @@ Unter der toten Eiche
 枯れたカシの木の間の家
 Scheint der Mond.
 その池の上に月が照っている
-&nbsp;
-&nbsp;
+ &nbsp;
+ &nbsp;
 Wo ihr dunkles Abbild
 カシの木々の暗い影が
 Durch das Wasser greift,
@@ -116,13 +118,18 @@ Frauenhand.
   <footer style="background: #fff;">
     &copy; Copyright 2025 by Aki.
   </footer>
+
   <script>
     const element = document.getElementById('lyrics');
     const lines = element ? element.textContent.split('\n') : [];
     element.innerHTML = lines
-      .map((line, index) =>
-        `<p class="${index % 2 === 0 ? 'odd-line' : 'even-line'}">${line.trimStart()}</p>`
+      .map((line, index) => 
+        `<p class="${
+            index % 2 === 0 ? 'odd-line'
+            : line === "\u00A0" ? 'even-line nbsp' : 'even-line'
+            }">${ line }</p>`
       )
       .join('\n');
   </script>
+
 </body>

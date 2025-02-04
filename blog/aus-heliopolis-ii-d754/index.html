@@ -36,8 +36,10 @@
     <div class="youtube-video">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/MpusI5KNsbE?si=FZPzcqVUpraEm6RW&rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
-
-    <div class="foo">
+    <div class="song-title">
+      
+    </div>
+    <div class="lyrics">
       <label for="toggle"></label>
       <input id="toggle" type=checkbox >
       <div id="lyrics"><p>Aus Heliopolis II
@@ -110,13 +112,18 @@ Findest du das rechte Wort.
   <footer style="background: #fff;">
     &copy; Copyright 2025 by Aki.
   </footer>
+
   <script>
     const element = document.getElementById('lyrics');
     const lines = element ? element.textContent.split('\n') : [];
     element.innerHTML = lines
-      .map((line, index) =>
-        `<p class="${index % 2 === 0 ? 'odd-line' : 'even-line'}">${line.trimStart()}</p>`
+      .map((line, index) => 
+        `<p class="${
+            index % 2 === 0 ? 'odd-line'
+            : line === "\u00A0" ? 'even-line nbsp' : 'even-line'
+            }">${ line }</p>`
       )
       .join('\n');
   </script>
+
 </body>

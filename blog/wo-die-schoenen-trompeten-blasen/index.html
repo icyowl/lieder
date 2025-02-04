@@ -36,15 +36,13 @@
     <div class="youtube-video">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/LmpKglu3btU?si=5jjtRSEAKHfKhG27&rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
-
-    <div class="foo">
+    <div class="song-title">
+      Wo die schönen Trompeten blasen
+    </div>
+    <div class="lyrics">
       <label for="toggle"></label>
       <input id="toggle" type=checkbox >
-      <div id="lyrics"><p>Wo die schönen Trompeten blasen
-&nbsp;
-&nbsp;
-&nbsp;
-Wer ist denn draußen und wer klopfet an,
+      <div id="lyrics"><p>Wer ist denn draußen und wer klopfet an,
 誰が外にいるの　誰がノックしてるの
 der mich so leise, so leise wecken kann?
 私をこんなにそっと、そっと目覚めさせられる人は誰？
@@ -140,13 +138,18 @@ da ist mein Haus，mein Haus von grünem Rasen!
   <footer style="background: #fff;">
     &copy; Copyright 2025 by Aki.
   </footer>
+
   <script>
     const element = document.getElementById('lyrics');
     const lines = element ? element.textContent.split('\n') : [];
     element.innerHTML = lines
-      .map((line, index) =>
-        `<p class="${index % 2 === 0 ? 'odd-line' : 'even-line'}">${line.trimStart()}</p>`
+      .map((line, index) => 
+        `<p class="${
+            index % 2 === 0 ? 'odd-line'
+            : line === "\u00A0" ? 'even-line nbsp' : 'even-line'
+            }">${ line }</p>`
       )
       .join('\n');
   </script>
+
 </body>

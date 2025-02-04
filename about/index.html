@@ -37,13 +37,18 @@
   <footer >
     &copy; Copyright 2025 by Aki.
   </footer>
+
   <script>
     const element = document.getElementById('lyrics');
     const lines = element ? element.textContent.split('\n') : [];
     element.innerHTML = lines
-      .map((line, index) =>
-        `<p class="${index % 2 === 0 ? 'odd-line' : 'even-line'}">${line.trimStart()}</p>`
+      .map((line, index) => 
+        `<p class="${
+            index % 2 === 0 ? 'odd-line'
+            : line === "\u00A0" ? 'even-line nbsp' : 'even-line'
+            }">${ line }</p>`
       )
       .join('\n');
   </script>
+
 </body>

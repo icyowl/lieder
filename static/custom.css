@@ -60,54 +60,45 @@
 }
 
 
-/* pre {
-  border: none;
-  padding: 0;
-  font-size: initial;
-  line-height: initial;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  background: inherit;
-} */
-
-.foo {
+.song-title {
   text-align: center;
+  font-family: var(--font-european);
+  font-size: var(--fontsize-2);
+}
+
+.lyrics {
+  text-align: center;
+  line-height: 2;
+  margin-bottom: 2rem;
+  color: var(--gray30);
 }
 
 #lyrics  {
-  /* text-align: center; */
   padding: 0;
-  font-size: var(--fontsize-6);
   line-height: var(--line-height-tight);
+  font-family: var(--font-european);
   overflow-x: hidden;
   overflow-y: hidden;
   background: inherit;
 }
 
-/* #lyrics p {
-  margin: 0;
-  line-height: 1;
-} */
-
 #lyrics .odd-line {
-  font-family: var(--font-european);
-  font-size: var(--fontsize-3);
+  font-size: var(--fontsize-4);
   color: var(--gray30);
 }
 
 #lyrics .even-line {
-  font-family: var(--font-heading);
   font-size: var(--fontsize-6);
   color: var(--gray60);
 }
 
-#lyrics .odd-line:empty::before {
-  /* empty element is <span><span> */
-  content: "*";
+#lyrics .even-line.nbsp {
   display: none;
 }
 
-
+#lyrics .even-line {
+  display: none;
+}
 
 /* toggle switch */
 
@@ -127,7 +118,7 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"]::before {
-  background: currentColor;
+  background: var(--gray30);
   border-radius: 6px;
   content: "";
   display: inline-block;
@@ -148,9 +139,8 @@ input[type="checkbox"]:checked {
 }
 
 input[type="checkbox"]:checked ~ #lyrics p.even-line {
-  display: none;
+  display: block;
 }
-
 
 
 

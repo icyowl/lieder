@@ -34,7 +34,7 @@
    
   <div class="excerpt">
     <h2><a href="erwartung-op2-1/">シェーンベルク：期待 - Erwartung op.2-1</a></h2>
-    <p>「４つの歌曲」（4 Lieder）より。</p>
+    <p>「４つの歌曲」（4 Lieder）より。nkmk</p>
 
     <div class="meta">Modified on 2025-02-02</div>
   </div>
@@ -100,13 +100,18 @@
   <footer >
     &copy; Copyright 2025 by Aki.
   </footer>
+
   <script>
     const element = document.getElementById('lyrics');
     const lines = element ? element.textContent.split('\n') : [];
     element.innerHTML = lines
-      .map((line, index) =>
-        `<p class="${index % 2 === 0 ? 'odd-line' : 'even-line'}">${line.trimStart()}</p>`
+      .map((line, index) => 
+        `<p class="${
+            index % 2 === 0 ? 'odd-line'
+            : line === "\u00A0" ? 'even-line nbsp' : 'even-line'
+            }">${ line }</p>`
       )
       .join('\n');
   </script>
+
 </body>
