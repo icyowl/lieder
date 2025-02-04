@@ -36,6 +36,9 @@
 
 
 
+
+
+
 /* content */
 
 .youtube-video {
@@ -57,8 +60,7 @@
 }
 
 
-pre {
-  /* override */
+/* pre {
   border: none;
   padding: 0;
   font-size: initial;
@@ -66,21 +68,30 @@ pre {
   overflow-x: hidden;
   overflow-y: hidden;
   background: inherit;
+} */
+
+.foo {
+  text-align: center;
 }
 
 #lyrics  {
-  text-align: center;
-  /* background: #f8f8f8; */
+  /* text-align: center; */
+  padding: 0;
+  font-size: var(--fontsize-6);
+  line-height: var(--line-height-tight);
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background: inherit;
 }
 
-#lyrics p {
+/* #lyrics p {
   margin: 0;
   line-height: 1;
-}
+} */
 
 #lyrics .odd-line {
   font-family: var(--font-european);
-  font-size: var(--fontsize-4);
+  font-size: var(--fontsize-3);
   color: var(--gray30);
 }
 
@@ -90,23 +101,58 @@ pre {
   color: var(--gray60);
 }
 
-#lyrics p:first-child {
-  font-family: var(--font-heading);
-  font-weight: var(--font-weight-semi-bold);
-  font-size: var(--fontsize-2);
-}
-
-#lyrics p:nth-child(2) {
-  font-family: var(--font-heading);
-  font-size: var(--fontsize-5);
-  color: var(--gray30);
-}
-
 #lyrics .odd-line:empty::before {
   /* empty element is <span><span> */
   content: "*";
   display: none;
 }
+
+
+
+/* toggle switch */
+
+input {
+  border: 1px solid #0c0c0d4d;
+  display: inline-block;
+  margin: 0 4px;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none; 
+  background: #0c0c0d1a;
+  border-radius: 8px;
+  height: 16px; 
+  width: 32px;
+}
+
+input[type="checkbox"]::before {
+  background: currentColor;
+  border-radius: 6px;
+  content: "";
+  display: inline-block;
+  height: 12px;
+  margin-left: 1px;
+  margin-top: 1px;
+  transition: background-color 0.3s;
+  width: 12px;
+}
+
+input[type="checkbox"]:checked::before {
+  background: #fff;
+  margin-left: 17px;
+}
+
+input[type="checkbox"]:checked {
+  background: var(--accent);
+}
+
+input[type="checkbox"]:checked ~ #lyrics p.even-line {
+  display: none;
+}
+
+
+
 
 .source {
   text-align: center;

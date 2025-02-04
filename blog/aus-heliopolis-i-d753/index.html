@@ -36,8 +36,11 @@
     <div class="youtube-video">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/K60rqyXjvoQ?si=_lbRz3guScliV8_1&rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
-    <pre id="lyrics">
-      <p>Aus Heliopolis I
+
+    <div class="foo">
+      <label for="toggle"></label>
+      <input id="toggle" type=checkbox >
+      <div id="lyrics"><p>Aus Heliopolis I
 &nbsp;
 &nbsp;
 &nbsp;
@@ -77,8 +80,9 @@ Licht erzeuget alle Gluten，
 光こそすべての炎の源
 Hoffnungspflanzen，Tatenfluten!”
 希望の植物　行動の潮なのだ！</p>
+</div>
+    </div>
 
-    </pre>
     <div class="source">
       <p></p>
       <p></p>
@@ -105,9 +109,9 @@ Hoffnungspflanzen，Tatenfluten!”
     &copy; Copyright 2025 by Aki.
   </footer>
   <script>
-    const preElement = document.getElementById('lyrics');
-    const lines = preElement ? preElement.textContent.split('\n') : [];
-    preElement.innerHTML = lines
+    const element = document.getElementById('lyrics');
+    const lines = element ? element.textContent.split('\n') : [];
+    element.innerHTML = lines
       .map((line, index) =>
         `<p class="${index % 2 === 0 ? 'odd-line' : 'even-line'}">${line.trimStart()}</p>`
       )

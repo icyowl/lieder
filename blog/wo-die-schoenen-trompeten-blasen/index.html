@@ -36,8 +36,11 @@
     <div class="youtube-video">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/LmpKglu3btU?si=5jjtRSEAKHfKhG27&rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
-    <pre id="lyrics">
-      <p>Wo die schönen Trompeten blasen
+
+    <div class="foo">
+      <label for="toggle"></label>
+      <input id="toggle" type=checkbox >
+      <div id="lyrics"><p>Wo die schönen Trompeten blasen
 &nbsp;
 &nbsp;
 &nbsp;
@@ -109,8 +112,9 @@ Allwo dort die schönen Trompeten blasen,
 トランペットが美しく鳴り響くところ
 da ist mein Haus，mein Haus von grünem Rasen!
 そこがぼくの家さ、緑の芝の家なんだ！</p>
+</div>
+    </div>
 
-    </pre>
     <div class="source">
       <p>Anna Prohaska (s), Eric Schneider (p)</p>
       <p>Behind The Lines ℗ 2014 Deutsche Grammophon GmbH, Berlin</p>
@@ -137,9 +141,9 @@ da ist mein Haus，mein Haus von grünem Rasen!
     &copy; Copyright 2025 by Aki.
   </footer>
   <script>
-    const preElement = document.getElementById('lyrics');
-    const lines = preElement ? preElement.textContent.split('\n') : [];
-    preElement.innerHTML = lines
+    const element = document.getElementById('lyrics');
+    const lines = element ? element.textContent.split('\n') : [];
+    element.innerHTML = lines
       .map((line, index) =>
         `<p class="${index % 2 === 0 ? 'odd-line' : 'even-line'}">${line.trimStart()}</p>`
       )
